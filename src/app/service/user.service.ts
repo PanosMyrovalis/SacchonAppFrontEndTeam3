@@ -1,5 +1,7 @@
+import { ProfileComponent } from './../profile/profile.component';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+
 
 
 
@@ -7,9 +9,10 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class UserService {
-  http: any;
 
-  constructor(private hhtp: HttpClient) { }
+
+
+  constructor(private http:HttpClient) { }
 
 
 
@@ -18,7 +21,7 @@ export class UserService {
   }
 
   getMeasurements() {
-    return this.http.get('http://localhost:4200/profile');
+    return this.http.get('http://localhost:9000//Measurements/1');
   }
 
   getConsultations() {
@@ -39,7 +42,7 @@ export class UserService {
       .set('content-Type', 'application/json')
       .set('crossDomain', 'true');
 
-    return this.hhtp.post(url, JSON.stringify(data), { headers: headers });
+    return this.http.post(url, JSON.stringify(data), { headers: headers });
   }
 
   postMeasurement(data: any) {
@@ -49,7 +52,7 @@ export class UserService {
       .set('content-Type', 'application/json')
       .set('crossDomain', 'true');
 
-    return this.hhtp.post(url, JSON.stringify(data), { headers: headers });
+    return this.http.post(url, JSON.stringify(data), { headers: headers });
   }
 
 

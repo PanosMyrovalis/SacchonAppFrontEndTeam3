@@ -21,7 +21,7 @@ export class ProfileComponent implements OnInit {
   getData() {
     this.loading = true;
     this.service.getPatient().subscribe({
-      next: (response: any) => {
+        next: (response: any) => {
         this.data = response;
         this.loading = false;
       },
