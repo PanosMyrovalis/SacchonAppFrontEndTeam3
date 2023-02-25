@@ -17,7 +17,7 @@ export class UserService {
 
 
   getPatient() {
-    return this.http.get('http://localhost:9000/Patient/1');
+    return this.http.get('http://localhost:9000/Patient/2');
   }
 
   getMeasurements() {

@@ -1,3 +1,28 @@
 <app-dashboard></app-dashboard>
-{{data | json}}
+<!--{{data | json}}-->
 <button class="btn btn-primary btn-lg" (click)="getData()">View measuremets </button>
+
+<div class="container mt-5">
+   
+    <h2>Display Consultation</h2>
+     
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Carb</th>
+            <th>Glucose</th>
+            <th>Measurement_date</th>
+            <th>Patient id</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ data.carb }}</td>
+          <td>{{ data.glucose }}</td>
+          <td>{{ data.measurement_date }}</td>
+          <td>{{ data.patient_id }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+

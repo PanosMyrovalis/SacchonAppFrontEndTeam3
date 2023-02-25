@@ -1,3 +1,32 @@
 <app-dashboard></app-dashboard>
-{{data | json}}
+<!--{{data | json}}-->
 <button class="btn btn-primary btn-lg" (click)="getData()">View consultations </button>
+
+
+<div class="container mt-5">
+   
+    <h2>Display Consultation</h2>
+     
+    <table class="table table-striped">
+      <thead>
+          <tr>
+            <th>Consultation date</th>
+            <th>Medical report</th>
+            <th>Medication dosage</th>
+            <th>Medication name</th>
+            <th>Doctor id</th>
+            <th>Patient id</th>
+          </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>{{ data.consultation_date }}</td>
+          <td>{{ data.medical_report }}</td>
+          <td>{{ data.medication_dosage }}</td>
+          <td>{{ data.medication_name }}</td>
+          <td>{{ data.doctor_id }}</td>
+          <td>{{ data.patient_id }}</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
