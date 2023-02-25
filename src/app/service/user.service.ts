@@ -1,6 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
+
+
 @Injectable({
   providedIn: 'root'
 })
@@ -12,7 +14,7 @@ export class UserService {
 
 
   getPatient() {
-    return this.http.get('http://localhost:4200/profile');
+    return this.http.get('http://localhost:9000/Patient/1');
   }
 
   getMeasurements() {

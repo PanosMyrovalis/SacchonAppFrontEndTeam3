@@ -1,31 +1,34 @@
+
 <div id="login-form-wrap">
   <h2>Login</h2>
-  <form id="login-form">
+  <form id="login-form" [formGroup]="createForm" (ngSubmit)="createPatient()" class="form">
     <p>
-    <input type="text" id="username" name="username" placeholder="Email address" required><i><span></span><span></span></i>
+    <input type="text" id="username" formControlName="email" name="username" placeholder="Email address" required><i><span></span><span></span></i>
     </p>
     <p>
-     <input type="text" id="username" name="username" placeholder="Password" required><i><span></span><span></span></i>
+     <input type="text" id="username" formControlName="password" name="username" placeholder="Password" required><i><span></span><span></span></i>
     </p>
     <p>
-      <input type="text" id="username" name="username" placeholder="First Name" required><i><span></span><span></span></i>
+      <input type="text" id="username" formControlName="firstname" name="username" placeholder="First Name" required><i><span></span><span></span></i>
       </p>
       <p>
-       <input type="text" id="username" name="username" placeholder="Last Name" required><i><span></span><span></span></i>
+       <input type="text" id="username" formControlName="lastname" name="username" placeholder="Last Name" required><i><span></span><span></span></i>
       </p>
       <p>
-        <input type="text" id="username" name="username" placeholder="Address" required><i><span></span><span></span></i>
+        <input type="text" id="username"  formControlName="address" name="username" placeholder="Address" required><i><span></span><span></span></i>
         </p>
         <p>
-         <input type="text" id="username" name="username" placeholder="Date of Birth" required><i><span></span><span></span></i>
+         <input type="text" id="username"  formControlName="dateofbirth" name="username" placeholder="Date of Birth" required><i><span></span><span></span></i>
         </p>
     <p>
-      <a  routerLink="/login" class="btn btn-primary btn-lg">SIGN UP</a>
+      <button [disabled]="createForm.invalid" class="btn btn-primary mt-3">Create a User</button>
     </p>
+
   </form>
   <div id="create-account-wrap">
     <p>Already have an account? <a routerLink="/login">Log in</a><p>
   </div>
 </div>
 
+<pre>{{ response | json }} </pre>
 <app-footer></app-footer>
