@@ -27,24 +27,34 @@ export class SignupComponent implements OnInit {
     // })
 
     this.createForm = this.fb.group({
+      firstName: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      lastName: ['', [Validators.required]],
+      dateOfBirth: ['', [Validators.required]],
       email: ['', [Validators.required]],
-      password: ['', [Validators.required, Validators.minLength(3)]],
-      firstname: ['', [Validators.required]],
-      lastname: ['', [Validators.required]],
+      phoneNumber: ['', [Validators.required]],
+      gender: ['', [Validators.required]],
+      bloodType: ['', [Validators.required]],
       address: ['', [Validators.required]],
-      dateofbirth: ['', [Validators.required]],
+      city: ['', [Validators.required]],
+      creationDate: ['', [Validators.required]],
     });
   }
 
   createPatient() {
     // console.log(this.createForm.get('name'));
     const data = {
+      firstName: this.createForm.get('firstName').value,
+      lastName: this.createForm.get('lastName').value,
+      dateOfBirth: this.createForm.get('dateOfBirth').value,
       email: this.createForm.get('email').value,
-      password: this.createForm.get('password').value,
-      firstname: this.createForm.get('firstname').value,
-      lastname: this.createForm.get('lastname').value,
+      phoneNumber: this.createForm.get('phoneNumber').value,
+      gender: this.createForm.get('gender').value,
+      bloodType: this.createForm.get('bloodType').value,
       address: this.createForm.get('address').value,
-      dateofbirth: this.createForm.get('dateofbirth').value
+      city: this.createForm.get('city').value,
+      zipCode: this.createForm.get('zipCode').value,
+      creationDate: this.createForm.get('creationDate').value
     };
 
     this.service.postPatient(data).subscribe({
@@ -52,28 +62,16 @@ export class SignupComponent implements OnInit {
     })
   }
 
-  get email(){
-    return this.createForm.get('email');
-  }
-
-  get password(){
-    return this.createForm.get('password');
-  }
-
-  get firstname(){
-    return this.createForm.get('firstname');
-  }
-
-  get lastname(){
-    return this.createForm.get('lastname');
-  }
-
-  get address(){
-    return this.createForm.get('address');
-  }
-
-  get dateofbirth(){
-    return this.createForm.get('dateofbirth');
-  }
+  get firstName(){return this.createForm.get('firstName');}
+  get lastName(){return this.createForm.get('lastName');}
+  get dateOfBirth(){return this.createForm.get('dateOfBirth');}
+  get email(){return this.createForm.get('email');}
+  get phoneNumber(){return this.createForm.get('phoneNumber');}
+  get gender(){return this.createForm.get('gender');}
+  get bloodType(){return this.createForm.get('bloodType');}
+  get address(){return this.createForm.get('address');}
+  get city(){return this.createForm.get('city');}
+  get zipCode(){return this.createForm.get('zipCode');}
+  get creationDate(){return this.createForm.get('creationDate');}
 
 }

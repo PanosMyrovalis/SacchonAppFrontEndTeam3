@@ -17,6 +17,7 @@ export class ProfileComponent implements OnInit {
     //   next: response => this.data = response
     // });
   }
+ 
 
   getData() {
     this.loading = true;

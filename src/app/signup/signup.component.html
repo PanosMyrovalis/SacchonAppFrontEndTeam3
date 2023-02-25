@@ -3,23 +3,39 @@
   <h2>Login</h2>
   <form id="login-form" [formGroup]="createForm" (ngSubmit)="createPatient()" class="form">
     <p>
-    <input type="text" id="email" formControlName="email" name="username" placeholder="Email address" required><i><span></span><span></span></i>
+    <input type="text" id="firstName" formControlName="firstName" name="firstName" placeholder="Insert the First Name" required><i><span></span><span></span></i>
     </p>
     <p>
-     <input type="text" id="password" formControlName="password" name="username" placeholder="Password" required><i><span></span><span></span></i>
+      <input type="text" id="lastName" formControlName="lastName" name="lastName" placeholder="Insert the Last Name" required><i><span></span><span></span></i>
+      </p>
+    <p>
+     <input type="text" id="dateOfBirth" formControlName="dateOfBirth" name="dateOfBirth" placeholder="Insert the Date Of Birth" required><i><span></span><span></span></i>
     </p>
     <p>
-      <input type="text" id="firstname" formControlName="firstname" name="username" placeholder="First Name" required><i><span></span><span></span></i>
+      <input type="text" id="email" formControlName="email" name="email" placeholder="Insert the email" required><i><span></span><span></span></i>
       </p>
       <p>
-       <input type="text" id="lastname" formControlName="lastname" name="username" placeholder="Last Name" required><i><span></span><span></span></i>
+       <input type="text" id="phoneNumber" formControlName="phoneNumber" name="phoneNumber" placeholder="Insert the Phone Number" required><i><span></span><span></span></i>
       </p>
       <p>
-        <input type="text" id="address"  formControlName="address" name="username" placeholder="Address" required><i><span></span><span></span></i>
+        <input type="text" id="gender"  formControlName="gender" name="gender" placeholder="Insert the Gender" required><i><span></span><span></span></i>
         </p>
         <p>
-         <input type="text" id="dateofbirth"  formControlName="dateofbirth" name="username" placeholder="Date of Birth" required><i><span></span><span></span></i>
+         <input type="text" id="bloodType"  formControlName="bloodType" name="bloodType" placeholder="Insert the Blood Type of Birth" required><i><span></span><span></span></i>
         </p>
+        <p>
+          <input type="text" id="address" formControlName="address" name="address" placeholder="Insert the Address" required><i><span></span><span></span></i>
+          </p>
+          <p>
+            <input type="text" id="city" formControlName="city" name="city" placeholder="Insert the City" required><i><span></span><span></span></i>
+            </p>
+          <p>
+           <input type="text" id="zipCode" formControlName="zipCode" name="zipCode" placeholder="Insert the Zip Code" required><i><span></span><span></span></i>
+          </p>
+          <p>
+            <input type="text" id="creationDate" formControlName="creationDate" name="creationDate" placeholder="Insert the current Date" required><i><span></span><span></span></i>
+           </p>
+          <p>
     <p>
       <button [disabled]="createForm.invalid" class="btn btn-primary mt-3">Create a User</button>
     </p>
