@@ -1,6 +1,6 @@
 
 <div id="login-form-wrap">
-  <h2>Login</h2>
+  <h1>SIGN UP</h1>
   <form id="login-form" [formGroup]="createForm" (ngSubmit)="createPatient()" class="form">
     <p>
     <input type="text" id="firstName" formControlName="firstName" name="firstName" placeholder="Insert the First Name" required><i><span></span><span></span></i>
@@ -21,7 +21,7 @@
         <input type="text" id="gender"  formControlName="gender" name="gender" placeholder="Insert the Gender" required><i><span></span><span></span></i>
         </p>
         <p>
-         <input type="text" id="bloodType"  formControlName="bloodType" name="bloodType" placeholder="Insert the Blood Type of Birth" required><i><span></span><span></span></i>
+         <input type="text" id="bloodType"  formControlName="bloodType" name="bloodType" placeholder="Insert the Blood Type" required><i><span></span><span></span></i>
         </p>
         <p>
           <input type="text" id="address" formControlName="address" name="address" placeholder="Insert the Address" required><i><span></span><span></span></i>
@@ -37,7 +37,7 @@
            </p>
           <p>
     <p>
-      <button [disabled]="createForm.invalid" class="btn btn-primary mt-3">Create a User</button>
+      <a  routerLink="/login" class="btn btn-primary btn-lg">SIGN UP</a>
     </p>
 
   </form>
