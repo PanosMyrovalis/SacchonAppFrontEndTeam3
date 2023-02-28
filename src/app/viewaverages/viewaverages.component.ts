@@ -28,6 +28,6 @@ export class ViewaveragesComponent implements OnInit {
       error: (err:any) => { console.log(err.message )}
     });
   }
+ }
 
 
-}

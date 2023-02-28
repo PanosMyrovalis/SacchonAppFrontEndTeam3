@@ -17,6 +17,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { AddmeasurementComponent } from './addmeasurement/addmeasurement.component';
 import { ViewaveragesComponent } from './viewaverages/viewaverages.component';
 import { ViewconsultationsComponent } from './viewconsultations/viewconsultations.component';
+import { SuccessComponent } from './success/success.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { ViewconsultationsComponent } from './viewconsultations/viewconsultation
      ProfileComponent,
      AddmeasurementComponent,
      ViewaveragesComponent,
-     ViewconsultationsComponent
+     ViewconsultationsComponent,
+     SuccessComponent
   ],
   imports: [
     BrowserModule,

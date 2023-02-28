@@ -1,3 +1,4 @@
+import { SuccessComponent } from './success/success.component';
 import { ViewconsultationsComponent } from './viewconsultations/viewconsultations.component';
 import { ViewaveragesComponent } from './viewaverages/viewaverages.component';
 import { AddmeasurementComponent } from './addmeasurement/addmeasurement.component';
@@ -20,7 +21,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent},
   { path: 'addmeasurement', component: AddmeasurementComponent},
   { path: 'viewaverages', component: ViewaveragesComponent},
-  { path: 'viewconsultations', component: ViewconsultationsComponent}
+  { path: 'viewconsultations', component: ViewconsultationsComponent},
+  { path: 'success', component: SuccessComponent}
 
 ];
 
