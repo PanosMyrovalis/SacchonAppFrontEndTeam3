@@ -4,25 +4,26 @@
 
 <div class="container mt-5">
 
-    <h2>Display measurements</h2>
+  <h2>Display measurements</h2>
 
-    <table class="table table-striped">
-      <thead>
-          <tr>
-            <th>Carb</th>
-            <th>Glucose</th>
-            <th>Measurement_date</th>
-            <th>Patient id</th>
-          </tr>
-      </thead>
-      <tbody>
+  <table class="table table-striped">
+    <thead>
         <tr>
-          <td>{{ data.carb }}</td>
-          <td>{{ data.glucose }}</td>
-          <td>{{ data.measurement_date }}</td>
-          <td>{{ data.patient_id }}</td>
+          <th>Carb</th>
+          <th>Glucose</th>
+          <th>Measurement_date</th>
+
         </tr>
-      </tbody>
-    </table>
-  </div>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of data">
+        <td>{{ item.carb}}</td>
+        <td>{{ item.glucose }}</td>
+        <td>{{ item.measurementDate }}</td>
+
+      </tr>
+    </tbody>
+  </table>
+</div>
+
 

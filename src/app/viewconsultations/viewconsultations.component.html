@@ -14,19 +14,23 @@
             <th>Medical report</th>
             <th>Medication dosage</th>
             <th>Medication name</th>
-            <th>Doctor id</th>
-            <th>Patient id</th>
+            <th>Doctor name</th>
+
           </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>{{ data.consultation_date }}</td>
-          <td>{{ data.medical_report }}</td>
-          <td>{{ data.medication_dosage }}</td>
-          <td>{{ data.medication_name }}</td>
-          <td>{{ data.doctor_id }}</td>
-          <td>{{ data.patient_id }}</td>
+        <tr *ngFor="let item of data">
+          <td>{{ item.consultationDate }}</td>
+          <td>{{ item.medicalReport }}</td>
+          <td>{{ item.medicationDosage }}</td>
+          <td>{{ item.medicationName }}</td>
+          <td>{{ item.doctor.firstName }}</td>
+
         </tr>
       </tbody>
     </table>
   </div>
+
+
+
+

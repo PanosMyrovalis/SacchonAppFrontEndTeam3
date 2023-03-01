@@ -17,15 +17,15 @@ export class UserService {
 
 
   getPatient() {
-    return this.http.get('http://localhost:9000/Patient/1');
+    return this.http.get('http://localhost:9000/Patient/3');
   }
 
   getMeasurements() {
-    return this.http.get('http://localhost:9000//Measurements/1');
+    return this.http.get('http://localhost:9000/Measurements/2');
   }
 
   getConsultations() {
-    return this.http.get('http://localhost:4200/Consultations/1');
+    return this.http.get('http://localhost:9000/Consultations/2');
   }
 
   getAverages() {
@@ -36,7 +36,7 @@ export class UserService {
 
 
   postPatient(data: any) {
-    const url = 'http://http://localhost:9000/PatientCreate';
+    const url = 'http://localhost:9000/PatientCreate';
 
     const headers = new HttpHeaders()
       .set('content-Type', 'application/json')
@@ -46,7 +46,7 @@ export class UserService {
   }
 
   postMeasurement(data: any) {
-    const url = 'http://http://localhost:9000/StoreMeasurement';
+    const url = 'http:localhost:9000/StoreMeasurement';
 
     const headers = new HttpHeaders()
       .set('content-Type', 'application/json')

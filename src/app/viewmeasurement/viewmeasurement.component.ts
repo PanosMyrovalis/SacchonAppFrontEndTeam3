@@ -18,16 +18,18 @@ export class ViewmeasurementComponent implements OnInit {
     // });
   }
 
+
   getData() {
     this.loading = true;
     this.service.getMeasurements().subscribe({
-      next: (response: any) => {
+        next: (response: any) => {
         this.data = response;
         this.loading = false;
       },
       error: (err:any) => { console.log(err.message )}
     });
   }
+
 
 
 

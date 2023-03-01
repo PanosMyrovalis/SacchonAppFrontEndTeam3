@@ -8,8 +8,10 @@ import { UserService } from '../service/user.service';
 })
 export class ViewconsultationsComponent implements OnInit {
 
+
   data: any;
   loading = false;
+items: any;
   constructor(private service: UserService) { }
 
   ngOnInit(): void {
