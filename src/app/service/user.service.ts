@@ -17,19 +17,19 @@ export class UserService {
 
 
   getPatient() {
-    return this.http.get('http://localhost:9000/Patient/3');
+    return this.http.get('http://localhost:9000/Patient/6');
   }
 
   getMeasurements() {
-    return this.http.get('http://localhost:9000/Measurements/2');
+    return this.http.get('http://localhost:9000/Measurements/6');
   }
 
   getConsultations() {
-    return this.http.get('http://localhost:9000/Consultations/2');
+    return this.http.get('http://localhost:9000/Consultations/1');
   }
 
   getAverages() {
-    return this.http.get('http://localhost:9000/PatientAverageMeasurements/1');
+    return this.http.get('http://localhost:9000/PatientAverageMeasurements/6');
   }
 
 
